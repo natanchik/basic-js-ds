@@ -20,17 +20,14 @@ class BinarySearchTree {
     this.root = null;    
   }
   root() {
-    this.root = getRoot(this.root, this.root.data);
-    function getRoot() {
-      if (!root) {
-        return null;
-      } else {
-        return root;        
-      };            
-    };
+    if (!root) {
+      return null;
+    } else {
+      return this.root;        
+    };            
+  };
     // throw new NotImplementedError('Not implemented');    
-  }
-
+  
   add(data) {
     this.root = addWithIn(this.root, data);
     function addWithIn(node, data) {
