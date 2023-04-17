@@ -25,8 +25,7 @@ class Queue {
     this.head = null;
   }
 
-  getUnderlyingList() {
-    
+  getUnderlyingList() {    
     return this.head;
   }
 
