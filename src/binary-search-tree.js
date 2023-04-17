@@ -2,7 +2,6 @@ const { NotImplementedError } = require('../extensions/index.js');
 
 const { Node } = require('../extensions/list-tree.js');
 
-
 /*class Node {
   constructor(data) {
     this.data = data;
@@ -17,19 +16,19 @@ const { Node } = require('../extensions/list-tree.js');
 */
 class BinarySearchTree {
   constructor() {
-    this.root = null;    
+    this.rRoot = null;    
   }
   root() {
-    if (!root) {
+    if (!this.rRoot) {
       return null;
     } else {
-      return this.root;        
+      return this.rRoot;        
     };            
   };
     // throw new NotImplementedError('Not implemented');    
   
   add(data) {
-    this.root = addWithIn(this.root, data);
+    this.rRoot = addWithIn(this.rRoot, data);
     function addWithIn(node, data) {
       if (!node) {
         return new Node(data);
@@ -48,7 +47,7 @@ class BinarySearchTree {
   }
 
   has(data) {
-    return searchWithIn(this.root, data);
+    return searchWithIn(this.rRoot, data);
     function searchWithIn(node, data) {
       if (!node) {
         return false;
@@ -64,7 +63,7 @@ class BinarySearchTree {
   }
 
   find(data) {
-    return findWithIn(this.root, data);
+    return findWithIn(this.rRoot, data);
     function findWithIn (node, data) {
       if (!node) {
         return null;
@@ -80,7 +79,7 @@ class BinarySearchTree {
   }
 
   remove(data) {
-    this.root = removeNode(this.root, data);
+    this.rRoot = removeNode(this.rRoot, data);
     function removeNode(node, data) {
       if (!node) {
         return null;
@@ -116,10 +115,10 @@ class BinarySearchTree {
   };
 
   min() {
-    if (!this.root) {
+    if (!this.rRoot) {
       return;
     }
-    let node = this.root;
+    let node = this.rRoot;
     while (node.left) {
       node = node.left;
     }
@@ -128,10 +127,10 @@ class BinarySearchTree {
   }
 
   max() {
-    if (!this.root) {
+    if (!this.rRoot) {
       return;
     }
-    let node = this.root;
+    let node = this.rRoot;
     while (node.right) {
       node = node.right;
     }
